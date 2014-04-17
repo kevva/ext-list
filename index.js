@@ -1,5 +1,11 @@
 'use strict';
 
+/**
+ * List of known file extensions and their MIME types
+ *
+ * @api public
+ */
+
 module.exports = {
     '3gp': 'video/3gpp',
     'a': 'application/octet-stream',
