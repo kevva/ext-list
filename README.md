@@ -4,7 +4,7 @@
 
 ## Install
 
-```bash
+```sh
 $ npm install --save ext-list
 ```
 
@@ -19,7 +19,7 @@ extList(function (err, obj) {
     }
 
     console.log(obj);
-    // => { '123': 'application/vnd.lotus-1-2-3', ez: 'application/andrew-inset', aw: 'application/applixware', ... }
+    //=> { '123': 'application/vnd.lotus-1-2-3', ez: 'application/andrew-inset', aw: 'application/applixware', ... }
 })
 ```
 

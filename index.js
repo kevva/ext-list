@@ -12,7 +12,8 @@ var got = require('got');
 module.exports = function (cb) {
     return got('http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types', function (err, res) {
         if (err) {
-            return cb(err);
+            cb(err);
+            return;
         }
 
         var obj = {};
