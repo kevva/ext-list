@@ -23,7 +23,7 @@
     "mime"
   ],
   "dependencies": {
-    "got": "^0.2.0"
+    "got": "^1.2.0"
   },
   "devDependencies": {
     "ava": "0.0.4"
