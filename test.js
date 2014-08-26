@@ -1,15 +1,13 @@
-/*global describe, it */
 'use strict';
 
-var assert = require('assert');
 var extList = require('./');
+var test = require('ava');
 
-describe('extList()', function () {
-    it('should return a list of known file types', function (cb) {
-        extList(function (err, obj) {
-            assert(!err);
-            assert(Object.keys(obj).length > 50);
-            cb();
-        });
+test('return a list of known file types', function (t) {
+    t.plan(2);
+
+    extList(function (err, obj) {
+        t.assert(!err);
+        t.assert(Object.keys(obj).length > 50);
     });
 });
