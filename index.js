@@ -10,29 +10,30 @@ var got = require('got');
  */
 
 module.exports = function (cb) {
+    var obj = {};
+
     return got('http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types', function (err, res) {
         if (err) {
             cb(err);
             return;
         }
 
-        var obj = {};
-
         res = res.split(/[\r\n]+/);
+
         res.forEach(function (r) {
             r = r.replace(/\s*#.*|^\s*|\s*$/g, '').split(/\s+/);
             obj[r.shift()] = r;
         });
 
-        for (var type in obj) {
-            var ext = obj[type];
+        Object.keys(obj).forEach(function (type) {
+            var extensions = obj[type];
 
-            for (var i = 0; i < ext.length; i++) {
-                obj[ext[i]] = type;
-            }
+            extensions.forEach(function (ext, i) {
+                obj[extensions[i]] = type;
+            });
 
             delete obj[type];
-        }
+        });
 
         cb(null, obj);
     });
