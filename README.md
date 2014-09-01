@@ -20,7 +20,7 @@ extList(function (err, obj) {
 
     console.log(obj);
     //=> { '123': 'application/vnd.lotus-1-2-3', ez: 'application/andrew-inset', aw: 'application/applixware', ... }
-})
+});
 ```
 
 ## License
