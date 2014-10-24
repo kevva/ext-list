@@ -4,10 +4,11 @@ var extList = require('./');
 var test = require('ava');
 
 test('return a list of known file types', function (t) {
-    t.plan(2);
+    t.assert(Object.keys(extList()).length > 50);
+    t.end();
+});
 
-    extList(function (err, obj) {
-        t.assert(!err);
-        t.assert(Object.keys(obj).length > 50);
-    });
+test('return the path to the JSON file', function (t) {
+    t.assert(extList.path === __dirname + '/ext-list.json');
+    t.end();
 });

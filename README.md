@@ -13,14 +13,11 @@ $ npm install --save ext-list
 ```js
 var extList = require('ext-list');
 
-extList(function (err, obj) {
-    if (err) {
-        throw err;
-    }
+console.log(extList());
+//=> { '123': 'application/vnd.lotus-1-2-3', ez: 'application/andrew-inset', aw: 'application/applixware', ... }
 
-    console.log(obj);
-    //=> { '123': 'application/vnd.lotus-1-2-3', ez: 'application/andrew-inset', aw: 'application/applixware', ... }
-});
+console.log(extList.path);
+//=> /path/to/ext-list.json
 ```
 
 ## License
