@@ -10,8 +10,8 @@ var path = require('path');
  */
 
 module.exports = function () {
-    var json = fs.readFileSync(path.join(__dirname, 'ext-list.json'));
-    return JSON.parse(json);
+	var json = fs.readFileSync(path.join(__dirname, 'ext-list.json'));
+	return JSON.parse(json);
 };
 
 /**
