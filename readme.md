@@ -1,4 +1,4 @@
-# ext-list [![Build Status](https://travis-ci.org/kevva/ext-list.svg?branch=master)](https://travis-ci.org/kevva/ext-list)
+# ext-list [![Build Status](http://img.shields.io/travis/kevva/ext-list.svg?style=flat)](https://travis-ci.org/kevva/ext-list)
 
 > Return a list of known [file extensions](http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types) and their MIME types
 
