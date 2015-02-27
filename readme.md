@@ -14,7 +14,7 @@ $ npm install --save ext-list
 var extList = require('ext-list');
 
 extList();
-//=> { '123': 'application/vnd.lotus-1-2-3', ez: 'application/andrew-inset', aw: 'application/applixware', ... }
+//=> {'123': 'application/vnd.lotus-1-2-3', ez: 'application/andrew-inset', aw: 'application/applixware', ...}
 ```
 
 ## License
