@@ -2,11 +2,13 @@
 
 > Return a list of known [file extensions](http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types) and their MIME types
 
+
 ## Install
 
-```sh
+```
 $ npm install --save ext-list
 ```
+
 
 ## Usage
 
@@ -16,6 +18,7 @@ var extList = require('ext-list');
 extList();
 //=> {'123': 'application/vnd.lotus-1-2-3', ez: 'application/andrew-inset', aw: 'application/applixware', ...}
 ```
+
 
 ## License
 
