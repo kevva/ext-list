@@ -1,7 +1,7 @@
 'use strict';
 var fs = require('fs');
-var got = require('got');
 var path = require('path');
+var got = require('got');
 var url = 'http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types';
 
 got(url, function (err, res) {
@@ -27,5 +27,5 @@ got(url, function (err, res) {
 		delete obj[type];
 	});
 
-	fs.writeFileSync(path.join(__dirname, '../ext-list.json'), JSON.stringify(obj));
+	fs.writeFileSync(path.join(__dirname, '../ext-list.json'), JSON.stringify(obj, null, 2));
 });

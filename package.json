@@ -13,8 +13,8 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "prepublish": "node lib/index.js",
-    "pretest": "node lib/index.js",
+    "prepublish": "node generate.js",
+    "pretest": "node generate.js",
     "test": "node test.js"
   },
   "files": [
