@@ -1,32 +1,28 @@
 'use strict';
-var fs = require('fs');
-var path = require('path');
-var got = require('got');
+const fs = require('fs');
+const path = require('path');
+const got = require('got');
 
-var url = 'http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types';
+got('http://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types').then(res => {
+	let body = res.body;
 
-got(url, function (err, res) {
-	if (err) {
-		throw err;
+	body = body.split(/[\r\n]+/).reduce((a, b) => {
+		b = b.replace(/\s*#.*|^\s*|\s*$/g, '').split(/\s+/);
+		a[b.shift()] = b;
+
+		return a;
+	}, {});
+
+	for (const x of Object.keys(body)) {
+		const exts = body[x];
+
+		for (const y of exts.entries()) {
+			const i = y[0];
+			body[exts[i]] = x;
+		}
+
+		delete body[x];
 	}
 
-	var obj = {};
-
-	res = res.split(/[\r\n]+/);
-	res.forEach(function (r) {
-		r = r.replace(/\s*#.*|^\s*|\s*$/g, '').split(/\s+/);
-		obj[r.shift()] = r;
-	});
-
-	Object.keys(obj).forEach(function (type) {
-		var extensions = obj[type];
-
-		extensions.forEach(function (ext, i) {
-			obj[extensions[i]] = type;
-		});
-
-		delete obj[type];
-	});
-
-	fs.writeFileSync(path.join(__dirname, '../ext-list.json'), JSON.stringify(obj, null, 2));
+	fs.writeFileSync(path.join(__dirname, 'ext-list.json'), JSON.stringify(body, null, 2));
 });
