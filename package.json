@@ -14,7 +14,7 @@
   },
   "scripts": {
     "prepublish": "node make.js",
-    "test": "xo && node test.js"
+    "test": "xo && ava"
   },
   "files": [
     "ext-list.json",
@@ -28,7 +28,7 @@
     "got": "^3.3.1"
   },
   "devDependencies": {
-    "ava": "^0.0.4",
+    "ava": "*",
     "xo": "*"
   }
 }

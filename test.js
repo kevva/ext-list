@@ -1,8 +1,6 @@
-'use strict';
-var test = require('ava');
-var extList = require('./');
+import test from 'ava';
+import m from './';
 
-test('return a list of known file types', function (t) {
-	t.assert(Object.keys(extList()).length > 50, Object.keys(extList()).length);
-	t.end();
+test(t => {
+	t.truthy(Object.keys(m()).length);
 });
