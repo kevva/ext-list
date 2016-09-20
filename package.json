@@ -13,8 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "prepublish": "node generate.js",
-    "pretest": "node generate.js",
+    "prepublish": "node make.js",
     "test": "node test.js"
   },
   "files": [
