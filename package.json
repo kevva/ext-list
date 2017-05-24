@@ -13,23 +13,20 @@
     "node": ">=4"
   },
   "scripts": {
-    "prepublish": "node make.js",
     "test": "xo && ava"
   },
   "files": [
-    "ext-list.json",
     "index.js"
   ],
   "keywords": [
     "ext",
     "mime"
   ],
+  "dependencies": {
+    "mime-db": "^1.28.0"
+  },
   "devDependencies": {
     "ava": "*",
-    "got": "^6.5.0",
     "xo": "*"
-  },
-  "xo": {
-    "esnext": true
   }
 }
