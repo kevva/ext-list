@@ -2,5 +2,6 @@ import test from 'ava';
 import m from '.';
 
 test(t => {
-	t.truthy(Object.keys(m()).length);
+	t.is(m().png, 'image/png');
+	t.is(m().tar, 'application/x-tar');
 });
