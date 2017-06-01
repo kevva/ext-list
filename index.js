@@ -1,18 +1,18 @@
 'use strict';
-const mimeDb = require('mime-db');
+var mimeDb = require('mime-db');
 
-module.exports = () => {
-	const ret = {};
+module.exports = function () {
+	var ret = {};
 
-	for (const x of Object.keys(mimeDb)) {
-		const val = mimeDb[x];
+	Object.keys(mimeDb).forEach(function (x) {
+		var val = mimeDb[x];
 
 		if (val.extensions && val.extensions.length > 0) {
-			for (const y of val.extensions) {
+			val.extensions.forEach(function (y) {
 				ret[y] = x;
-			}
+			});
 		}
-	}
+	});
 
 	return ret;
 };

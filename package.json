@@ -10,7 +10,7 @@
     "url": "https://github.com/kevva"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=0.10.0"
   },
   "scripts": {
     "test": "xo && ava"
