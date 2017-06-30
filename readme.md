@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save ext-list
+$ npm install ext-list
 ```
 
 
@@ -16,8 +16,14 @@ $ npm install --save ext-list
 const extList = require('ext-list');
 
 extList();
-//=> {'123': 'application/vnd.lotus-1-2-3', ez: 'application/andrew-inset', aw: 'application/applixware', ...}
+//=> Map {'123' => 'application/vnd.lotus-1-2-3', 'ez' => 'application/andrew-inset', ...}
 ```
+
+## API
+
+### extList()
+
+Returns a `Map` with the extensions as keys and their content types as values.
 
 
 ## License
