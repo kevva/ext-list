@@ -1,32 +1,32 @@
 {
-  "name": "ext-list",
-  "version": "3.0.0",
-  "description": "List of known file extensions and their MIME types",
-  "license": "MIT",
-  "repository": "kevva/ext-list",
-  "author": {
-    "name": "Kevin Mårtensson",
-    "email": "kevinmartensson@gmail.com",
-    "url": "https://github.com/kevva"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "ext",
-    "mime"
-  ],
-  "dependencies": {
-    "mime-db": "^1.28.0"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  }
+	"name": "ext-list",
+	"version": "3.0.0",
+	"description": "List of known file extensions and their MIME types",
+	"license": "MIT",
+	"repository": "kevva/ext-list",
+	"author": {
+		"name": "Kevin Mårtensson",
+		"email": "kevinmartensson@gmail.com",
+		"url": "https://github.com/kevva"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"ext",
+		"mime"
+	],
+	"dependencies": {
+		"mime-db": "^1.28.0"
+	},
+	"devDependencies": {
+		"ava": "*",
+		"xo": "*"
+	}
 }
